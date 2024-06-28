@@ -48,8 +48,9 @@ export default function RootLayout({
             <main >
               {children}
             </main>
-            <footer className="w-full  py-3 dark:bg-gradient-to-tl bg-gradient-to-tr from-[#004225] to-[#FBB917]">
+            <footer className="w-full  py-3 dark:bg-gradient-to-tl bg-gradient-to-tr from-[#357EC7] to-[#00BFFF]">
               <Footer />
+              <p className="text-center text-white">©2024 PT. Kru Wisata Nusantara - Bajo Crew Tour - All Rights Reserved</p>
             </footer>
           </div>
         </Providers>

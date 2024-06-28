@@ -24,6 +24,9 @@ import {
   HeartFilledIcon,
   SearchIcon,
   Logo,
+  InstagramIcon,
+  TiktokIcon,
+  WhatsappIcon,
 } from "@/components/icons";
 import { Image } from "@nextui-org/react";
 
@@ -62,13 +65,13 @@ export const Navbar = () => {
             <p className="font-serif ml-3 font-bold text-lg text-black"> <span className="text-[#008080]">Bajo</span> Crew <span className="text-[#FBB917]">Tour</span></p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-2 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href} >
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium text-yellow-700",
+                  "data-[active=true]:text-yellow-800 data-[active=true]:font-medium text-green-800",
                 )}
                 color="foreground"
                 href={item.href}
@@ -85,18 +88,17 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
+          <Link isExternal href={"https://wa.me/081236798078"}>
+            <WhatsappIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
+          <Link isExternal href={"https://www.instagram.com/bajocrewtour/"}>
+            <InstagramIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
+          <Link isExternal href={"https://www.tiktok.com/@bajocrewtour?lang=id-ID"}>
+            <TiktokIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
             isExternal

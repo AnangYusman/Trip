@@ -145,6 +145,7 @@ export default function Home() {
       type: 'Reguler Boat',
       name: 'SENTRAL',
       description: 'CAPACITY 12 PERSON',
+      include: '5 Cabin | 3 Bathroom',
       imageUrl: 'kapal-1.png'
     },
     {
@@ -152,6 +153,7 @@ export default function Home() {
       type: 'Semi Phinisi',
       name: 'ARIMBI',
       description: 'CAPACITY 10 PERSON',
+      include: '4 Cabin | 4 Bathroom',
       imageUrl: 'kapal-2.png'
     },
     {
@@ -159,6 +161,7 @@ export default function Home() {
       type: 'Phinisi Boat',
       name: 'LV I',
       description: 'CAPACITY 14 PERSON',
+      include: '6 Cabin | 6 Bathroom',
       imageUrl: 'kapal-3.png'
     },
     {
@@ -166,6 +169,7 @@ export default function Home() {
       type: 'Luxury Phinisi',
       name: 'NEPTUNE',
       description: 'CAPACITY 20 PERSON',
+      include: '8 Cabin | 8 Bathroom',
       imageUrl: 'kapal-4.png'
     }
   ]
@@ -173,7 +177,7 @@ export default function Home() {
     <div className="w-full">
       <div className="flex flex-col">
         <div className="flex justify-center">
-          <Card isFooterBlurred className=" lg:w-full lg:h-[650px]  sm:col-span-7 mt-1 rounded-none ">
+          <Card isFooterBlurred className=" lg:w-full lg:h-[650px]  sm:col-span-7  rounded-none ">
             <CardHeader className="absolute flex flex-col items-center justify-items-center top-1/2 ">
               <p className="text-2xl text-white font-serif uppercase font-bold">Sail Explore Dance</p>
               <h4 className="text-white/70 font-medium text-lg">With Bajo Crew Tour, you're settled. Never worry about a thing.</h4>
@@ -186,7 +190,7 @@ export default function Home() {
             />
           </Card>
         </div>
-        <Card className="bg-[#040720] dark:bg-white/80 rounded-none mt-20 py-5">
+        <Card className="bg-[#040720] dark:bg-white/80 rounded-none  py-5">
           <div className="flex flex-col items-center justify-center mt-8">
             <p className="text-white dark:text-black text-xl lg:text-3xl font-serif  ">Trip with Bajo Crew Tour</p>
             <p className="text-sm text-center dark:text-black text-white">Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
@@ -252,13 +256,13 @@ export default function Home() {
         </div>
         <Card className="bg-[#040720] dark:bg-white/80 rounded-none mt-20 py-5">
           <div className="flex flex-col items-center justify-center mt-8">
-            <p className="text-white text-3xl font-serif dark:text-black  ">Open Trip Package</p>
-            <p className="text-white text-center mx-3 dark:text-black text-sm">Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
+            <p className="text-white text-3xl font-serif dark:text-black text-center  ">Open Trip Package</p>
+            <p className="text-white text-center mx-3 dark:text-black text-xs lg:text-sm">Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
           </div>
           <div className="flex flex-row items-center">
             <div className="w-full gap-2 grid grid-cols-12 px-8 pt-3">
               {openTrip?.map((data: any) => (
-                <Card isFooterBlurred className="w-full h-[300px] col-span-4 sm:col-span-3">
+                <Card isFooterBlurred className=" h-[300px] col-span-12 sm:col-span-6 lg:col-span-3">
                   <CardHeader className="absolute z-10 top-1 flex-col items-start">
                     <p className="text-tiny text-white/80 uppercase font-bold bg-yellow-700 px-1 py-1 rounded-md">{data?.duration}</p>
                     {/* <h4 className="text-black font-medium text-2xl">{data?.Package}</h4> */}
@@ -283,13 +287,13 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center ">
-            <p className="text-white text-3xl font-serif  mt-14 dark:text-black">Exclusive Raja Bintang Tour with Private boat</p>
-            <p className="text-gray-300 text-center text-sm mx-5 dark:text-black">Experience luxury and privacy with our exclusive Raja Bintang tour package. With a private yacht, your trip becomes more intimate as the entire yacht is exclusively yours and your group’s. We handle everything from transportation to curating activities and accommodations, tailoring every detail to meet your specific preferences and needs. Elevate your adventure with Raja Bintang. Book now for an exclusive, luxurious, and private Komodo island tour experience.</p>
+            <p className="text-white text-3xl font-serif  mt-14 dark:text-black text-center">Exclusive Bajo Crew Tour with Private boat</p>
+            <p className="text-white text-center lg:text-sm text-xs mx-5 dark:text-black">Experience luxury and privacy with our exclusive Bajo Crew tour package. With a private yacht, your trip becomes more intimate as the entire yacht is exclusively yours and your group’s. We handle everything from transportation to curating activities and accommodations, tailoring every detail to meet your specific preferences and needs. Elevate your adventure with Bajo Crew. Book now for an exclusive, luxurious, and private Komodo island tour experience.</p>
           </div>
           <div className="flex flex-row items-center">
             <div className="w-full gap-2 grid grid-cols-12 px-8 pt-3">
               {privateTrip?.map((data: any) => (
-                <Card isFooterBlurred className="w-full h-[300px] col-span-4 sm:col-span-3">
+                <Card isFooterBlurred className="h-[300px] col-span-12 sm:col-span-6 lg:col-span-3">
                   <CardHeader className="absolute z-10 top-1 flex-col items-start">
                     <p className="text-tiny text-white/80 uppercase font-bold bg-yellow-700 px-1 py-1 rounded-md">{data?.type}</p>
                     {/* <h4 className="text-black font-medium text-2xl">{data?.Package}</h4> */}
@@ -304,6 +308,7 @@ export default function Home() {
                     <div>
                       <p className=" text-lg text-yellow-700 font-bold ">{data?.name}</p>
                       <p className="text-black text-tiny">{data?.description}</p>
+                      <p className="text-black text-xs">{data?.include}</p>
                     </div>
                     <Button className="text-tiny bg-yellow-700" radius="full" size="sm">
                       Notify Me
@@ -318,9 +323,15 @@ export default function Home() {
           <p className="text-black dark:text-white text-3xl font-serif  mt-14">Documentation</p>
           <p className="text-gray-800 dark:text-white text-center text-sm mx-5">Capture your holiday moments with an experienced photographer and get satisfying results while on holiday in Labuan Bajo.</p>
         </div>
-        <div className="my-7 ml-3 flex flex-row items-center">
-          <ReactPlayer controls={true} light={true} url="https://www.youtube.com/watch?v=wxcQ2Rq7YXo" />
-          <p className="ml-5 font-serif text-lg w-6/12">KAMI MELAYANI JASA PAKET TRIP LABUAN BAJO DAN KOMODO. BEBERAPA PAKET YANG KAMI SEDIAKAN ANTARA LAIN PAKET OPEN TRIP LABUAN BAJO, PAKET PRIVATE TRIP LABUAN BAJO, SEWA KAPAL LABUAN BAJO,  PAKET FOTOGRAFER DAN VIDEOGRAFER.</p>
+        <div className="w-full">
+          <div className="my-7 mx-3  flex flex-col lg:flex-row items-center ">
+            <div className="w-full lg:w-5/12">
+              <ReactPlayer controls={true} light={true} url="https://www.youtube.com/watch?v=wxcQ2Rq7YXo" width="100%" height='300px' />
+            </div>
+            <div className="w-full lg:w-7/12">
+              <p className="ml-5 font-serif text-lg  text-justify mt-3">KAMI MELAYANI JASA PAKET TRIP LABUAN BAJO DAN KOMODO. BEBERAPA PAKET YANG KAMI SEDIAKAN ANTARA LAIN PAKET OPEN TRIP LABUAN BAJO, PAKET PRIVATE TRIP LABUAN BAJO, SEWA KAPAL LABUAN BAJO,  PAKET FOTOGRAFER DAN VIDEOGRAFER.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
